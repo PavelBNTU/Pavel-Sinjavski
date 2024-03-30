@@ -6,11 +6,9 @@ import java.util.regex.Pattern;
 import static java.awt.SystemColor.text;
 
 public class Example {
-    private static Object text;
-
     public static void main(String[] args) {
-        final String regex = "(1234567)";
-        final String string = "Мой номер телефона 375-29-1234567 Мой ник в Телеграм @TheGodFather";
+        final String regex = "1234567|[A-z]";
+        final String string = "Мой номер телефона +375-29-1234567. Мой ник в Телеграм @TheGodFather.";
 
         final Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
         final Matcher matcher = pattern.matcher(string);
